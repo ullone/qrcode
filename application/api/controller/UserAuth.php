@@ -7,7 +7,7 @@ use think\Db;
 use think\Cookie;
 use think\Cache;
 use app\index\controller;
-use app\EasyWechat\Foundation\Application;
+use EasyWechat\Foundation\Application;
 
 class UserAuth {
   public function __construct () {
