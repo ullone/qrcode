@@ -3,11 +3,11 @@ namespace app\api\controller;
 
 header("Content-Type:text/html; charset=utf-8");
 
-  class CheckToken
-  {
+class CheckToken
+{
 
       //判断是介入还是用户  只有第一次介入的时候才会返回echostr
-      function index()
+    public function index()
       {
           //这个echostr呢  只有说验证的时候才会echo  如果是验证过之后这个echostr是不存在的字段了
           $echoStr = $_GET["echostr"];
@@ -27,7 +27,7 @@ header("Content-Type:text/html; charset=utf-8");
           //微信传过来的值  什么用我不知道...
           $nonce     = $_GET["nonce"];
           //定义你在微信公众号开发者模式里面定义的token
-          $token  = "xiaochen";
+          $token  = "mateor1newlif2cjiumeng3";
           //三个变量 按照字典排序 形成一个数组
           $tmpArr = array(
               $token,
@@ -63,4 +63,4 @@ header("Content-Type:text/html; charset=utf-8");
           curl_close($curl);
           return $output;
       }//https_request end
-  } //classend
+} //classend
