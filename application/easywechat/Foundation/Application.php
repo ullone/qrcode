@@ -24,7 +24,7 @@
  * @see      http://overtrue.me
  */
 
-namespace app\easywechat\Application;
+namespace app\easywechat\Foundation\Application;
 
 use Doctrine\Common\Cache\Cache as CacheInterface;
 use Doctrine\Common\Cache\FilesystemCache;
