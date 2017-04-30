@@ -3,7 +3,7 @@ namespace app\api\controller;
 
 header("Content-Type:text/html; charset=utf-8");
 
-include __DIR__ . '/../vendor/autoload.php';
+include '/webdata/userAPI/vendor/autoload.php';
 
 use think\Db;
 use think\Cookie;
