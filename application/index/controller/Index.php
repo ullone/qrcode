@@ -14,7 +14,7 @@ class Index
           $signature = $_GET["signature"];
           $timestamp = $_GET["timestamp"];
           $nonce = $_GET["nonce"];
-          $token = "cjiumeng123";
+          $token = "mateor1newlif2cjiumeng3";
           $tmpArr = array($token, $timestamp, $nonce);
           sort($tmpArr, SORT_STRING);
           $tmpStr = implode( $tmpArr );
