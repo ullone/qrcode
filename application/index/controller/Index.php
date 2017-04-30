@@ -9,8 +9,8 @@ class Index
 {
     public function index()
     {
-      // $test = new UserAuth();
-      // echo 'success';
-      $check = new CheckToken();
+      $test = new UserAuth();
+      echo 'success';
+      // $check = new CheckToken();
     }
 }
