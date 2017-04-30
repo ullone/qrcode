@@ -11,6 +11,5 @@ class Index
       // $test = new UserAuth();
       // echo 'success';
       $check = new CheckToken();
-      $check->index();
     }
 }

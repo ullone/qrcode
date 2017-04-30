@@ -5,7 +5,9 @@ header("Content-Type:text/html; charset=utf-8");
 
 class CheckToken
 {
-
+    public function __construct (){
+      $this->index();
+    }
       //判断是介入还是用户  只有第一次介入的时候才会返回echostr
     public function index()
       {
