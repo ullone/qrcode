@@ -1,6 +1,8 @@
 <?php
 namespace app\api\controller;
 
+use tiink\Db;
+
 header("Content-Type:text/html; charset=utf-8");
 
 class CheckToken
@@ -28,6 +30,11 @@ class CheckToken
           $timestamp = $_GET["timestamp"];
           //微信传过来的值  什么用我不知道...
           $nonce     = $_GET["nonce"];
+          Db::table('server_token_log')->insert([
+            'signature' => $signature,
+            'timestamp' => $timestamp,
+            'echostr'   => $_GET["echostr"]
+          ]);
           //定义你在微信公众号开发者模式里面定义的token
           $token  = "mateor1newlif2cjiumeng3";
           //三个变量 按照字典排序 形成一个数组
