@@ -1,7 +1,7 @@
 <?php
 namespace app\api\controller;
 
-use tiink\Db;
+use think\Db;
 
 header("Content-Type:text/html; charset=utf-8");
 
