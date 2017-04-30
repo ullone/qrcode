@@ -8,7 +8,7 @@ class Index
 {
     public function index()
     {
-      $test = new UserAuth();
+      // $test = new UserAuth();
       echo 'success';
     }
 }
