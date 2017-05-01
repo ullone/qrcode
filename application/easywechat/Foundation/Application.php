@@ -24,16 +24,16 @@
  * @see      http://overtrue.me
  */
 
-namespace app\easywechat\Foundation;
+namespace app\EasyWechat\Foundation;
 
 // include ""
 
-use app\easywechat\Pimple\Container;
+use app\EasyWechat\Pimple\Container;
 use Doctrine\Common\Cache\Cache as CacheInterface;
 use Doctrine\Common\Cache\FilesystemCache;
-use easywechat\Core\AccessToken;
-use easywechat\Core\Http;
-use easywechat\Support\Log;
+use EasyWechat\Core\AccessToken;
+use EasyWechat\Core\Http;
+use EasyWechat\Support\Log;
 use Monolog\Handler\HandlerInterface;
 use Monolog\Handler\NullHandler;
 use Monolog\Handler\StreamHandler;
@@ -43,34 +43,34 @@ use Symfony\Component\HttpFoundation\Request;
 /**
  * Class Application.
  *
- * @property \easywechat\Core\AccessToken                    $access_token
- * @property \easywechat\Server\Guard                        $server
- * @property \easywechat\User\User                           $user
- * @property \easywechat\User\Tag                            $user_tag
- * @property \easywechat\User\Group                          $user_group
- * @property \easywechat\Js\Js                               $js
+ * @property \EasyWechat\Core\AccessToken                    $access_token
+ * @property \EasyWechat\Server\Guard                        $server
+ * @property \EasyWechat\User\User                           $user
+ * @property \EasyWechat\User\Tag                            $user_tag
+ * @property \EasyWechat\User\Group                          $user_group
+ * @property \EasyWechat\Js\Js                               $js
  * @property \Overtrue\Socialite\Providers\WeChatProvider    $oauth
- * @property \easywechat\Menu\Menu                           $menu
- * @property \easywechat\Notice\Notice                       $notice
- * @property \easywechat\Material\Material                   $material
- * @property \easywechat\Material\Temporary                  $material_temporary
- * @property \easywechat\Staff\Staff                         $staff
- * @property \easywechat\Url\Url                             $url
- * @property \easywechat\QRCode\QRCode                       $qrcode
- * @property \easywechat\Semantic\Semantic                   $semantic
- * @property \easywechat\Stats\Stats                         $stats
- * @property \easywechat\Payment\Merchant                    $merchant
- * @property \easywechat\Payment\Payment                     $payment
- * @property \easywechat\Payment\LuckyMoney\LuckyMoney       $lucky_money
- * @property \easywechat\Payment\MerchantPay\MerchantPay     $merchant_pay
- * @property \easywechat\Payment\CashCoupon\CashCoupon       $cash_coupon
- * @property \easywechat\Reply\Reply                         $reply
- * @property \easywechat\Broadcast\Broadcast                 $broadcast
- * @property \easywechat\Card\Card                           $card
- * @property \easywechat\Device\Device                       $device
- * @property \easywechat\ShakeAround\ShakeAround             $shakearound
- * @property \easywechat\OpenPlatform\OpenPlatform           $open_platform
- * @property \easywechat\MiniProgram\MiniProgram             $mini_program
+ * @property \EasyWechat\Menu\Menu                           $menu
+ * @property \EasyWechat\Notice\Notice                       $notice
+ * @property \EasyWechat\Material\Material                   $material
+ * @property \EasyWechat\Material\Temporary                  $material_temporary
+ * @property \EasyWechat\Staff\Staff                         $staff
+ * @property \EasyWechat\Url\Url                             $url
+ * @property \EasyWechat\QRCode\QRCode                       $qrcode
+ * @property \EasyWechat\Semantic\Semantic                   $semantic
+ * @property \EasyWechat\Stats\Stats                         $stats
+ * @property \EasyWechat\Payment\Merchant                    $merchant
+ * @property \EasyWechat\Payment\Payment                     $payment
+ * @property \EasyWechat\Payment\LuckyMoney\LuckyMoney       $lucky_money
+ * @property \EasyWechat\Payment\MerchantPay\MerchantPay     $merchant_pay
+ * @property \EasyWechat\Payment\CashCoupon\CashCoupon       $cash_coupon
+ * @property \EasyWechat\Reply\Reply                         $reply
+ * @property \EasyWechat\Broadcast\Broadcast                 $broadcast
+ * @property \EasyWechat\Card\Card                           $card
+ * @property \EasyWechat\Device\Device                       $device
+ * @property \EasyWechat\ShakeAround\ShakeAround             $shakearound
+ * @property \EasyWechat\OpenPlatform\OpenPlatform           $open_platform
+ * @property \EasyWechat\MiniProgram\MiniProgram             $mini_program
  */
 class Application extends Container
 {
@@ -252,7 +252,7 @@ class Application extends Container
             return;
         }
 
-        $logger = new Logger('easywechat');
+        $logger = new Logger('EasyWechat');
 
         if (!$this['config']['debug'] || defined('PHPUNIT_RUNNING')) {
             $logger->pushHandler(new NullHandler());
