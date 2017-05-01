@@ -27,16 +27,16 @@
 namespace app\easywechat\Foundation\Application;
 
 use app\easywechat\Pimple\Container;
-use Doctrine\Common\Cache\Cache as CacheInterface;
-use Doctrine\Common\Cache\FilesystemCache;
-use easywechat\Core\AccessToken;
-use easywechat\Core\Http;
-use easywechat\Support\Log;
-use Monolog\Handler\HandlerInterface;
-use Monolog\Handler\NullHandler;
-use Monolog\Handler\StreamHandler;
-use Monolog\Logger;
-use Symfony\Component\HttpFoundation\Request;
+// use Doctrine\Common\Cache\Cache as CacheInterface;
+// use Doctrine\Common\Cache\FilesystemCache;
+// use easywechat\Core\AccessToken;
+// use easywechat\Core\Http;
+// use easywechat\Support\Log;
+// use Monolog\Handler\HandlerInterface;
+// use Monolog\Handler\NullHandler;
+// use Monolog\Handler\StreamHandler;
+// use Monolog\Logger;
+// use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Class Application.
