@@ -20,11 +20,11 @@
  * with this source code in the file LICENSE.
  */
 
-namespace EasyWeChat\Foundation\ServiceProviders;
+namespace app\easywechat\Foundation\ServiceProviders;
 
-use EasyWeChat\Url\Url;
-use Pimple\Container;
-use Pimple\ServiceProviderInterface;
+use app\easywechat\Url\Url;
+use app\easywechat\Pimple\Container;
+use app\easywechat\Pimple\ServiceProviderInterface;
 
 /**
  * Class UrlServiceProvider.
