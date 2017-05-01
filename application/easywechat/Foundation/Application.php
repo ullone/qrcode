@@ -34,7 +34,7 @@ use Doctrine\Common\Cache\Cache as CacheInterface;
 use Doctrine\Common\Cache\FilesystemCache;
 use app\easywechat\Core\AccessToken;
 use app\easywechat\Core\Http;
-use app\easywechat\Support\Log;
+use app\easywechat\Support\Log; 
 use Monolog\Handler\HandlerInterface;
 use Monolog\Handler\NullHandler;
 use Monolog\Handler\StreamHandler;
