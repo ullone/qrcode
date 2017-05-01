@@ -20,11 +20,11 @@
  * with this source code in the file LICENSE.
  */
 
-namespace EasyWeChat\Foundation\ServiceProviders;
+namespace app\easywechat\Foundation\ServiceProviders;
 
-use EasyWeChat\Js\Js;
-use Pimple\Container;
-use Pimple\ServiceProviderInterface;
+use app\easywechat\Js\Js;
+use app\easywechat\Pimple\Container;
+use app\easywechat\Pimple\ServiceProviderInterface;
 
 /**
  * Class JsServiceProvider.
