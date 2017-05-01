@@ -24,7 +24,9 @@
  * @see      http://overtrue.me
  */
 
-namespace app\easywechat\Foundation\Application;
+namespace app\easywechat\Foundation;
+
+// include ""
 
 use app\easywechat\Pimple\Container;
 use Doctrine\Common\Cache\Cache as CacheInterface;
