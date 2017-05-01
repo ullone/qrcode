@@ -20,7 +20,7 @@
  * @see      https://github.com/laravel/framework/blob/4.2/src/Illuminate/Support/Arr.php
  */
 
-namespace EasyWeChat\Support;
+namespace app\easywechat\Support;
 
 use Closure;
 
