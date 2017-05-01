@@ -20,11 +20,11 @@
  * with this source code in the file LICENSE.
  */
 
-namespace EasyWeChat\Foundation\ServiceProviders;
+namespace app\easywechat\Foundation\ServiceProviders;
 
 use Overtrue\Socialite\SocialiteManager as Socialite;
-use Pimple\Container;
-use Pimple\ServiceProviderInterface;
+use app\easywechat\Pimple\Container;
+use app\easywechat\Pimple\ServiceProviderInterface;
 
 /**
  * Class OAuthServiceProvider.
