@@ -34,11 +34,11 @@ use Doctrine\Common\Cache\Cache as CacheInterface;
 use Doctrine\Common\Cache\FilesystemCache;
 use app\easywechat\Core\AccessToken;
 use app\easywechat\Core\Http;
-use app\easywechat\Support\Log; 
-use Monolog\Handler\HandlerInterface;
-use Monolog\Handler\NullHandler;
-use Monolog\Handler\StreamHandler;
-use Monolog\Logger;
+use app\easywechat\Support\Log;
+use app\easywechat\Monolog\Handler\HandlerInterface;
+use app\easywechat\Monolog\Handler\NullHandler;
+use app\easywechat\Monolog\Handler\StreamHandler;
+use app\easywechat\Monolog\Logger;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
