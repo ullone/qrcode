@@ -29,6 +29,7 @@ namespace app\easywechat\Foundation;
 // include ""
 
 use app\easywechat\Pimple\Container;
+// use easywechat\Support\Collection;
 use Doctrine\Common\Cache\Cache as CacheInterface;
 use Doctrine\Common\Cache\FilesystemCache;
 use easywechat\Core\AccessToken;
