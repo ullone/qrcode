@@ -20,12 +20,12 @@
  * with this source code in the file LICENSE.
  */
 
-namespace EasyWeChat\Foundation\ServiceProviders;
+namespace app\easywechat\Foundation\ServiceProviders;
 
-use EasyWeChat\Material\Material;
-use EasyWeChat\Material\Temporary;
-use Pimple\Container;
-use Pimple\ServiceProviderInterface;
+use app\easywechat\Material\Material;
+use app\easywechat\Material\Temporary;
+use app\easywechat\Pimple\Container;
+use app\easywechat\Pimple\ServiceProviderInterface;
 
 /**
  * Class MaterialServiceProvider.
