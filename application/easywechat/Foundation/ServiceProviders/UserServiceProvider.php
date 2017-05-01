@@ -24,11 +24,11 @@
  * @see      http://overtrue.me
  */
 
-namespace EasyWeChat\Foundation\ServiceProviders;
+namespace app\easywechat\Foundation\ServiceProviders;
 
-use EasyWeChat\User\Group;
-use EasyWeChat\User\Tag;
-use EasyWeChat\User\User;
+use app\easywechat\User\Group;
+use app\easywechat\User\Tag;
+use app\easywechat\User\User;
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;
 
