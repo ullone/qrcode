@@ -24,12 +24,12 @@
  * @see      http://overtrue.me
  */
 
-namespace EasyWeChat\Foundation\ServiceProviders;
+namespace app\easywechat\Foundation\ServiceProviders;
 
-use EasyWeChat\Encryption\Encryptor;
-use EasyWeChat\Server\Guard;
-use Pimple\Container;
-use Pimple\ServiceProviderInterface;
+use app\easywechat\Encryption\Encryptor;
+use app\easywechat\Server\Guard;
+use app\easywechat\Pimple\Container;
+use app\easywechat\Pimple\ServiceProviderInterface;
 
 /**
  * Class ServerServiceProvider.
