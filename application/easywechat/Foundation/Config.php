@@ -24,9 +24,9 @@
  * @see      http://overtrue.me
  */
 
-namespace EasyWeChat\Foundation;
+namespace easywechat\Foundation;
 
-use EasyWeChat\Support\Collection;
+use easywechat\Support\Collection;
 
 /**
  * Class Config.

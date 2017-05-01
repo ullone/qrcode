@@ -19,7 +19,7 @@
  * @see      http://overtrue.me
  */
 
-namespace EasyWeChat\Support;
+namespace easywechat\Support;
 
 use ArrayAccess;
 use ArrayIterator;

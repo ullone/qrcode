@@ -24,7 +24,7 @@
  * THE SOFTWARE.
  */
 
-namespace app\EasyWechat\Pimple;
+namespace app\easywechat\Pimple;
 
 /**
  * Container main class.
