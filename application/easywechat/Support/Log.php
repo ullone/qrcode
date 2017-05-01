@@ -20,7 +20,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace EasyWeChat\Support;
+namespace app\easywechat\Support;
 
 use Monolog\Handler\ErrorLogHandler;
 use Monolog\Handler\NullHandler;
@@ -111,7 +111,7 @@ class Log
      */
     private static function createDefaultLogger()
     {
-        $log = new Logger('EasyWeChat');
+        $log = new Logger('app\easywechat');
 
         if (defined('PHPUNIT_RUNNING')) {
             $log->pushHandler(new NullHandler());
