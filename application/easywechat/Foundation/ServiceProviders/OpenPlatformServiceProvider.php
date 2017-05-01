@@ -25,22 +25,22 @@
  * @see      http://overtrue.me
  */
 
-namespace EasyWeChat\Foundation\ServiceProviders;
+namespace app\easywechat\Foundation\ServiceProviders;
 
-use EasyWeChat\Encryption\Encryptor;
-use EasyWeChat\Foundation\Application;
-use EasyWeChat\OpenPlatform\AccessToken;
-use EasyWeChat\OpenPlatform\Api\BaseApi;
-use EasyWeChat\OpenPlatform\Api\PreAuthorization;
-use EasyWeChat\OpenPlatform\Authorizer;
-use EasyWeChat\OpenPlatform\AuthorizerAccessToken;
-use EasyWeChat\OpenPlatform\EventHandlers;
-use EasyWeChat\OpenPlatform\Guard;
-use EasyWeChat\OpenPlatform\OpenPlatform;
-use EasyWeChat\OpenPlatform\VerifyTicket;
+use app\easywechat\Encryption\Encryptor;
+use app\easywechat\Foundation\Application;
+use app\easywechat\OpenPlatform\AccessToken;
+use app\easywechat\OpenPlatform\Api\BaseApi;
+use app\easywechat\OpenPlatform\Api\PreAuthorization;
+use app\easywechat\OpenPlatform\Authorizer;
+use app\easywechat\OpenPlatform\AuthorizerAccessToken;
+use app\easywechat\OpenPlatform\EventHandlers;
+use app\easywechat\OpenPlatform\Guard;
+use app\easywechat\OpenPlatform\OpenPlatform;
+use app\easywechat\OpenPlatform\VerifyTicket;
 use Overtrue\Socialite\SocialiteManager as Socialite;
-use Pimple\Container;
-use Pimple\ServiceProviderInterface;
+use app\easywechat\Pimple\Container;
+use app\easywechat\Pimple\ServiceProviderInterface;
 
 class OpenPlatformServiceProvider implements ServiceProviderInterface
 {

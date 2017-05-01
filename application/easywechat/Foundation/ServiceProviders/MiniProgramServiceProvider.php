@@ -20,20 +20,20 @@
  * with this source code in the file LICENSE.
  */
 
-namespace EasyWeChat\Foundation\ServiceProviders;
+namespace app\easywechat\Foundation\ServiceProviders;
 
-use EasyWeChat\Encryption\Encryptor;
-use EasyWeChat\MiniProgram\AccessToken;
-use EasyWeChat\MiniProgram\Material\Temporary;
-use EasyWeChat\MiniProgram\MiniProgram;
-use EasyWeChat\MiniProgram\Notice\Notice;
-use EasyWeChat\MiniProgram\QRCode\QRCode;
-use EasyWeChat\MiniProgram\Server\Guard;
-use EasyWeChat\MiniProgram\Sns\Sns;
-use EasyWeChat\MiniProgram\Staff\Staff;
-use EasyWeChat\MiniProgram\Stats\Stats;
-use Pimple\Container;
-use Pimple\ServiceProviderInterface;
+use app\easywechat\Encryption\Encryptor;
+use app\easywechat\MiniProgram\AccessToken;
+use app\easywechat\MiniProgram\Material\Temporary;
+use app\easywechat\MiniProgram\MiniProgram;
+use app\easywechat\MiniProgram\Notice\Notice;
+use app\easywechat\MiniProgram\QRCode\QRCode;
+use app\easywechat\MiniProgram\Server\Guard;
+use app\easywechat\MiniProgram\Sns\Sns;
+use app\easywechat\MiniProgram\Staff\Staff;
+use app\easywechat\MiniProgram\Stats\Stats;
+use app\easywechat\Pimple\Container;
+use app\easywechat\Pimple\ServiceProviderInterface;
 
 /**
  * Class MiniProgramServiceProvider.

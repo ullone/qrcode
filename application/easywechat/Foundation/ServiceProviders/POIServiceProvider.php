@@ -24,11 +24,11 @@
  * @see      http://overtrue.me
  */
 
-namespace EasyWeChat\Foundation\ServiceProviders;
+namespace app\easywechat\Foundation\ServiceProviders;
 
-use EasyWeChat\POI\POI;
-use Pimple\Container;
-use Pimple\ServiceProviderInterface;
+use app\easywechat\POI\POI;
+use app\easywechat\Pimple\Container;
+use app\easywechat\Pimple\ServiceProviderInterface;
 
 /**
  * Class POIServiceProvider.

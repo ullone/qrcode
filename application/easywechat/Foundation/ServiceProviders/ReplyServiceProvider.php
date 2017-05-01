@@ -20,11 +20,11 @@
  * with this source code in the file LICENSE.
  */
 
-namespace EasyWeChat\Foundation\ServiceProviders;
+namespace app\easywechat\Foundation\ServiceProviders;
 
-use EasyWeChat\Reply\Reply;
-use Pimple\Container;
-use Pimple\ServiceProviderInterface;
+use app\easywechat\Reply\Reply;
+use app\easywechat\Pimple\Container;
+use app\easywechat\Pimple\ServiceProviderInterface;
 
 /**
  * Class ReplyServiceProvider.

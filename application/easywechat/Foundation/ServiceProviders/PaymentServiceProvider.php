@@ -24,15 +24,15 @@
  * @see      http://overtrue.me
  */
 
-namespace EasyWeChat\Foundation\ServiceProviders;
+namespace app\easywechat\Foundation\ServiceProviders;
 
-use EasyWeChat\Payment\CashCoupon\CashCoupon;
-use EasyWeChat\Payment\LuckyMoney\LuckyMoney;
-use EasyWeChat\Payment\Merchant;
-use EasyWeChat\Payment\MerchantPay\MerchantPay;
-use EasyWeChat\Payment\Payment;
-use Pimple\Container;
-use Pimple\ServiceProviderInterface;
+use app\easywechat\Payment\CashCoupon\CashCoupon;
+use app\easywechat\Payment\LuckyMoney\LuckyMoney;
+use app\easywechat\Payment\Merchant;
+use app\easywechat\Payment\MerchantPay\MerchantPay;
+use app\easywechat\Payment\Payment;
+use app\easywechat\Pimple\Container;
+use app\easywechat\Pimple\ServiceProviderInterface;
 
 /**
  * Class PaymentServiceProvider.

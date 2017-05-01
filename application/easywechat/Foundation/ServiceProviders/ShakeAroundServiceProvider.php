@@ -24,11 +24,11 @@
  * @see       http://overtrue.me
  */
 
-namespace EasyWeChat\Foundation\ServiceProviders;
+namespace app\easywechat\Foundation\ServiceProviders;
 
-use EasyWeChat\ShakeAround\ShakeAround;
-use Pimple\Container;
-use Pimple\ServiceProviderInterface;
+use app\easywechat\ShakeAround\ShakeAround;
+use app\easywechat\Pimple\Container;
+use app\easywechat\Pimple\ServiceProviderInterface;
 
 /**
  * Class ShakeAroundServiceProvider.

@@ -20,11 +20,11 @@
  * with this source code in the file LICENSE.
  */
 
-namespace EasyWeChat\Foundation\ServiceProviders;
+namespace app\easywechat\Foundation\ServiceProviders;
 
-use EasyWeChat\Broadcast\Broadcast;
-use Pimple\Container;
-use Pimple\ServiceProviderInterface;
+use app\easywechat\Broadcast\Broadcast;
+use app\easywechat\Pimple\Container;
+use app\easywechat\Pimple\ServiceProviderInterface;
 
 /**
  * Class BroadcastServiceProvider.
