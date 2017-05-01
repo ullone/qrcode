@@ -24,7 +24,7 @@
  * THE SOFTWARE.
  */
 
-namespace Pimple;
+namespace app\easywechat\Pimple;
 
 /**
  * Pimple service provider interface.
