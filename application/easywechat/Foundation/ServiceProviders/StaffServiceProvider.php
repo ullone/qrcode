@@ -20,12 +20,12 @@
  * with this source code in the file LICENSE.
  */
 
-namespace EasyWeChat\Foundation\ServiceProviders;
+namespace app\easywechat\Foundation\ServiceProviders;
 
-use EasyWeChat\Staff\Session;
-use EasyWeChat\Staff\Staff;
-use Pimple\Container;
-use Pimple\ServiceProviderInterface;
+use app\easywechat\Staff\Session;
+use app\easywechat\Staff\Staff;
+use app\easywechat\Pimple\Container;
+use app\easywechat\Pimple\ServiceProviderInterface;
 
 /**
  * Class StaffServiceProvider.
