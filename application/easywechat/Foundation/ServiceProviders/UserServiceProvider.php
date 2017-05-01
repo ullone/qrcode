@@ -29,8 +29,8 @@ namespace app\easywechat\Foundation\ServiceProviders;
 use app\easywechat\User\Group;
 use app\easywechat\User\Tag;
 use app\easywechat\User\User;
-use Pimple\Container;
-use Pimple\ServiceProviderInterface;
+use app\easywechat\Pimple\Container;
+use app\easywechat\Pimple\ServiceProviderInterface;
 
 /**
  * Class UserServiceProvider.
