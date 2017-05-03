@@ -10,3 +10,4 @@
 // +----------------------------------------------------------------------
 
 // 应用公共文件
+\think\Loader::addNamespaceAlias('EasyWechat','app\easywechat');
