@@ -23,4 +23,4 @@ require __DIR__ . '/../thinkphp/start.php';
 //     'Pimple'     => '/../application/easywechat/pimple/pimple/src/Pimple',
 //     'Symfony'    => '/../application/easywechat/symfony/http-foundation'
 // ]);
-\think\Loader::addNamespace('abc','../application/extra');
+// \think\Loader::addNamespace('abc','../application/extra');
