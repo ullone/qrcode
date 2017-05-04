@@ -19,7 +19,7 @@ class UserAuth {
     $options = [
       'debug'    => true,
       'app_id'   => 'wx860c23f43a2de53a',
-      'secret'   => '6841c7cc7f6e83b413f0fe611ae91ff2',
+      'secret'   => '6841c7cc7f6e83b413f0fe611ae91ff',
       'token'    => 'cjiumeng123',
       'log'      => [
         'level'  => 'debug',
@@ -33,7 +33,7 @@ class UserAuth {
     $server->setMessageHandler(function ($message) {
         // $message->FromUserName // 用户的 openid
         // $message->MsgType // 消息类型：event, text....
-        $this->e = "您好！欢迎关注我!";
+        $this->me = "您好！欢迎关注我!";
     });
     // $mess = $server->getMessage();
     // return $mess['ToUserName'];
