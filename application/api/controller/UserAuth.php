@@ -25,13 +25,9 @@ class UserAuth {
         'file'   => '/tmp/easywechat.log'
       ],
     ];
-    $app         = new Foundation\Application($options);
-    // 获取 access token 实例
-    $accessToken = $app->access_token; // easywechat\Core\AccessToken 实例
-    $token = $accessToken->getToken(); // token 字符串
-    $token = $accessToken->getToken(true); // 强制重新从微信服务器获取 token.
-    $userService = $app->user;
-    $user        = $userService->get($openId);
-    echo $user->token;
+    //
+    $app = new Foundation\Application($options);
+
+    $response->send();
   }
 }
