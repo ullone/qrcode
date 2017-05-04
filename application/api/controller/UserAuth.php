@@ -32,10 +32,10 @@ class UserAuth {
     $server->setMessageHandler(function ($message) {
         // $message->FromUserName // 用户的 openid
         // $message->MsgType // 消息类型：event, text....
-        // return "您好！欢迎关注我!";
+        return "您好！欢迎关注我!";
     });
-    $mess = $server->getMessage();
-    return $mess['ToUserName'];
+    // $mess = $server->getMessage();
+    // return $mess['ToUserName'];
     // $response = $server->serve();
     // $response->send(); // Laravel 里请使用：return $response;
   }
