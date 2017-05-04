@@ -29,7 +29,9 @@ class UserAuth {
     $app = new Foundation\Application($options);
     // 从项目实例中得到服务端应用实例。
     $server = $app->server;
-    $message = 'haha';
+    $message = array(
+      'test' => 'haha',
+    );
     $server->setMessageHandler(function ($message) {
         // $message->FromUserName // 用户的 openid
         // $message->MsgType // 消息类型：event, text....
