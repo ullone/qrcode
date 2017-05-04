@@ -15,7 +15,16 @@ use EasyWeChat\Foundation as Foundation;
 
 class UserAuth {
   public function __construct () {
-    $options = [];
+    $options = [
+      'debug'    => true,
+      'app_id'   => 'wx860c23f43a2de53a',
+      'secret'   => '6841c7cc7f6e83b413f0fe611ae91ff2',
+      'token'    => 'cjiumeng123',
+      'log'      => [
+        'level'  => 'debug',
+        'file'   => '/tmp/easywechat.log'
+      ],
+    ];
     $app         = new Foundation\Application($options);
     // 获取 access token 实例
     $accessToken = $app->access_token; // easywechat\Core\AccessToken 实例

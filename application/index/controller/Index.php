@@ -7,8 +7,7 @@ use \think\View;
 
 class Index
 {
-    public function index()
-    {
+    public function index() {
       $test = new UserAuth();
       echo 'success';
       // $check = new CheckToken();
