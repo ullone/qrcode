@@ -14,6 +14,7 @@ use app\index\controller;
 use EasyWeChat\Foundation as Foundation;
 
 class UserAuth {
+  private $me;
   public function __construct () {
     $options = [
       'debug'    => true,
@@ -32,7 +33,7 @@ class UserAuth {
     $server->setMessageHandler(function ($message) {
         // $message->FromUserName // 用户的 openid
         // $message->MsgType // 消息类型：event, text....
-        return "您好！欢迎关注我!";
+        $this->me = "您好！欢迎关注我!";
     });
     // $mess = $server->getMessage();
     // return $mess['ToUserName'];
