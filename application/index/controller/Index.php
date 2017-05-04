@@ -10,6 +10,7 @@ class Index
     public function index() {
       $test = new UserAuth();
       echo $test->me;
+      echo 'success';
       // echo 'success';
       // $check = new CheckToken();
     }
