@@ -14,7 +14,7 @@ use app\index\controller;
 use EasyWeChat\Foundation as Foundation;
 
 class UserAuth {
-  private $me;
+  public $me;
   public function __construct () {
     $options = [
       'debug'    => true,
