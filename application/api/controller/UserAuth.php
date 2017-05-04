@@ -30,8 +30,8 @@ class UserAuth {
     $accessToken = $app->access_token; // easywechat\Core\AccessToken 实例
     $token = $accessToken->getToken(); // token 字符串
     $token = $accessToken->getToken(true); // 强制重新从微信服务器获取 token.
-    // $userService = $app->user;
-    // $user        = $userService->get($openId);
+    $userService = $app->user;
+    $user        = $userService->get($openId);
     echo $user->token;
   }
 }
