@@ -27,14 +27,14 @@ class UserAuth {
       ],
     ];
     //
-    echo 'success';
+    // echo 'success';
     $app = new Foundation\Application($options);
     // 从项目实例中得到服务端应用实例。
     $server = $app->server;
     $server->setMessageHandler(function ($message) {
         // $message->FromUserName // 用户的 openid
         // $message->MsgType // 消息类型：event, text....
-        $this->me = "您好！欢迎关注我!";
+        echo "您好！欢迎关注我!";
     });
     // $mess = $server->getMessage();
     // return $mess['ToUserName'];
