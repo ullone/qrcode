@@ -18,7 +18,7 @@ class UserAuth {
   public function __construct () {
     $options = [
       'debug'    => true,
-      'app_id'   => 'wx860c23f43a2de53a',
+      'app_id'   => 'wx860c23f43a2de53',
       'secret'   => '6841c7cc7f6e83b413f0fe611ae91ff',
       'token'    => 'cjiumeng123',
       'log'      => [
