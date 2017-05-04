@@ -18,8 +18,8 @@ class UserAuth {
   public function __construct () {
     $options = [
       'debug'    => true,
-      'app_id'   => 'wx860c23f43a2de53',
-      'secret'   => '6841c7cc7f6e83b413f0fe611ae91ff',
+      'app_id'   => 'wx860c23f43a2de53a',
+      'secret'   => '6841c7cc7f6e83b413f0fe611ae91ff2',
       'token'    => 'cjiumeng123',
       'log'      => [
         'level'  => 'debug',
@@ -27,6 +27,7 @@ class UserAuth {
       ],
     ];
     //
+    echo 'success';
     $app = new Foundation\Application($options);
     // 从项目实例中得到服务端应用实例。
     $server = $app->server;
