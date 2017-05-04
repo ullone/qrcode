@@ -35,7 +35,7 @@ class UserAuth {
         // $message->MsgType // 消息类型：event, text....
         $this->me = "您好！欢迎关注我!";
     });
-    $mess = $server->getMessage();
+    // $mess = $server->getMessage();
     // return $mess['ToUserName'];
     // $response = $server->serve();
     // $response->send(); // Laravel 里请使用：return $response;
