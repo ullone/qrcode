@@ -3,7 +3,7 @@ namespace app\api\controller;
 
 header("Content-Type:text/html; charset=utf-8");
 
-require_once __DIR__ . '/../../../extend/easywechat/autoload.php';
+require_once __DIR__ . '/../../../extend/autoload.php';
 // include '/webdata/userAPI/vendor/autoload.php';
 
 use think\Db;
