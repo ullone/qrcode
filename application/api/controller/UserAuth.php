@@ -27,7 +27,7 @@ class UserAuth {
     ];
     //
     $app = new Foundation\Application($options);
-
+    $response = $app->server->serve();
     $response->send();
   }
 }
