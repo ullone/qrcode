@@ -38,6 +38,7 @@ class UserAuth {
     //获取openid
     // $this->openid = $user['id'];
     $accessToken = $accessToken->toArray();
-    $this->openid = $accessToken;
+    $token = $accessToken->getToken();
+    $this->openid = $token;
   }
 }
