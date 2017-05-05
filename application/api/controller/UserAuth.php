@@ -20,7 +20,7 @@ class UserAuth {
       'debug'    => true,
       'app_id'   => 'wx860c23f43a2de53a',
       'secret'   => '6841c7cc7f6e83b413f0fe611ae91ff2',
-      'token'    => 'cjiumeng123',
+      'token'    => 'mateor1newlif2cjiumeng3',
       'log'      => [
         'level'  => 'debug',
         'file'   => '/tmp/easywechat.log'
@@ -29,16 +29,16 @@ class UserAuth {
     //
     // echo 'success';
     $app   = new Foundation\Application($options);
-    $accessToken = $app->access_token;
+    // $accessToken = $app->access_token;
     // 从项目实例中得到服务端应用实例。
-    // $oauth = $app->oauth;
+    $oauth = $app->oauth;
     //获取oauth授权结果用户信息
-    // $user  = $oauth->user();
-    // $user  = $user->toArray();
+    $user  = $oauth->user();
+    $user  = $user->toArray();
     //获取openid
-    // $this->openid = $user['id'];
+    $this->openid = $user['id'];
     // $accessToken = $accessToken->toArray();
-    $token = $accessToken->getToken();
-    $this->openid = $token;
+    // $token = $accessToken->getToken();
+    // $this->openid = $token;
   }
 }
