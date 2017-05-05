@@ -14,7 +14,7 @@ use app\index\controller;
 use EasyWeChat\Foundation as Foundation;
 
 class UserAuth {
-  public $me;
+  public $openid;
   public function __construct () {
     $options = [
       'debug'    => true,
@@ -28,17 +28,13 @@ class UserAuth {
     ];
     //
     // echo 'success';
-    $app = new Foundation\Application($options);
+    $app   = new Foundation\Application($options);
     // 从项目实例中得到服务端应用实例。
-    $server = $app->server;
-    $server->setMessageHandler(function ($message) {
-        // $message->FromUserName // 用户的 openid
-        // $message->MsgType // 消息类型：event, text....
-        echo "您好！欢迎关注我!";
-    });
-    // $mess = $server->getMessage();
-    // return $mess['ToUserName'];
-    // $response = $server->serve();
-    // $response->send(); // Laravel 里请使用：return $response;
+    $oauth = $app->oauth;
+    //获取oauth授权结果用户信息
+    $user  = $oauth->user();
+    $user  = $user->toArray();
+    //获取openid
+    $this->openid = $user['id'];
   }
 }
