@@ -14,6 +14,7 @@ use app\index\controller;
 use EasyWeChat\Foundation as Foundation;
 
 class UserAuth {
+  
   public $openid;
   public function __construct () {
     $options = [
@@ -39,7 +40,7 @@ class UserAuth {
     $user  = $user->toArray();
     //获取openid
     $this->openid = $user['id'];
-    
+
     // $accessToken = $accessToken->toArray();
     // $token = $accessToken->getToken();
     // $this->openid = $token;
