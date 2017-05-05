@@ -22,7 +22,6 @@ class CheckToken
       if( $str == $signature && $echostr ){
           //第一次接入weixin api接口的时候
           echo  $echostr;
-          exit;
         }
     }
 }
