@@ -33,10 +33,10 @@ class UserAuth {
     // echo 'success';
     $app   = new Foundation\Application($options);
 
-    $app = new Application($options);
+    // $app = new Application($options);
     $response = $app->server->serve();
     // 将响应输出
-    $response->send(); 
+    $response->send();
     // $accessToken = $app->access_token;
     // 从项目实例中得到服务端应用实例。
     // $oauth = $app->oauth;
