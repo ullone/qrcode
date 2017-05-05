@@ -32,14 +32,19 @@ class UserAuth {
     //
     // echo 'success';
     $app   = new Foundation\Application($options);
+
+    $app = new Application($options);
+    $response = $app->server->serve();
+    // 将响应输出
+    $response->send(); 
     // $accessToken = $app->access_token;
     // 从项目实例中得到服务端应用实例。
-    $oauth = $app->oauth;
-    //获取oauth授权结果用户信息
-    $user  = $oauth->user();
-    $user  = $user->toArray();
-    //获取openid
-    $this->openid = $user['id'];
+    // $oauth = $app->oauth;
+    // //获取oauth授权结果用户信息
+    // $user  = $oauth->user();
+    // $user  = $user->toArray();
+    // //获取openid
+    // $this->openid = $user['id'];
 
     // $accessToken = $accessToken->toArray();
     // $token = $accessToken->getToken();
