@@ -29,12 +29,14 @@ class UserAuth {
     //
     // echo 'success';
     $app   = new Foundation\Application($options);
+    $accessToken = $app->access_token;
     // 从项目实例中得到服务端应用实例。
-    $oauth = $app->oauth;
+    // $oauth = $app->oauth;
     //获取oauth授权结果用户信息
-    $user  = $oauth->user();
-    $user  = $user->toArray();
+    // $user  = $oauth->user();
+    // $user  = $user->toArray();
     //获取openid
-    $this->openid = $user['id'];
+    // $this->openid = $user['id'];
+    $this->openid = $accessToken;
   }
 }
