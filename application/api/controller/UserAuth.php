@@ -34,7 +34,7 @@ class UserAuth {
     $app   = new Foundation\Application($options);
 
     // $app = new Application($options);
-    $response = $app->server->serve();
+    $response = $app->server;
     // 将响应输出
     $response->send();
     // $accessToken = $app->access_token;
