@@ -18,8 +18,10 @@ class UserAuth {
   public function __construct () {
     $options = [
       'debug'    => true,
-      'app_id'   => 'wx860c23f43a2de53a',
-      'secret'   => '6841c7cc7f6e83b413f0fe611ae91ff2',
+      'app_id'   => 'wxfb396a8777e67439',
+      'secret'   => '758831403d20fecd8b0ac6334779b3a4',
+      // 'app_id'   => 'wx860c23f43a2de53a',
+      // 'secret'   => '6841c7cc7f6e83b413f0fe611ae91ff2',
       'token'    => 'mateor1newlif2cjiumeng3',
       'log'      => [
         'level'  => 'debug',
@@ -37,6 +39,7 @@ class UserAuth {
     $user  = $user->toArray();
     //获取openid
     $this->openid = $user['id'];
+    
     // $accessToken = $accessToken->toArray();
     // $token = $accessToken->getToken();
     // $this->openid = $token;
