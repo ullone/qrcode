@@ -191,7 +191,8 @@ return [
       // 缓存有效期 0表示永久缓存
       'expire' => 7200,
       // redis 服务器
-      'host' => '120.27.105.170',
+      // 'host' => '120.27.105.170',
+      'host' => 'localhost',
       'password'  =>  'cjiumeng',
       // redis 服务器端口
       'port' => 6379,
