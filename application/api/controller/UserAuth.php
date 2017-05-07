@@ -19,12 +19,12 @@ class UserAuth {
   public function __construct () {
     if(!empty($_GET['user_code'])){
       //应用没有app_code
-      $this->callBackUserInfo();
+      $this->callBackUserInfo($_GET['user_code']);
     }else {
       echo $this->getOpenId();
     }
   }
-  private function callBackUserInfo(){
+  private function callBackUserInfo($user_code){
   //返回uid给应用
   }
   private function getOpenId(){
