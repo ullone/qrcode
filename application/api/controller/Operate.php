@@ -23,9 +23,7 @@
         $uid = Db::table('user')->where('open_id',$this->openid)->field('id')->find()['id'];
       }
       $this->updateCacheAndCookie($uid);
-      if(empty($_GET['app_id'])){
-        callBack(102,'来自未知的应用');
-      }
+      
       $this->headerUrl($_GET['app_id']);
     }
 
@@ -44,7 +42,7 @@
     }
 
     private function headerUrl($app_id){
-      $uri = Db::table('app')->where('id',$app_id)->filed('app_uri')->find()['app_uri'];
+      $uri = $_GET['state'];
       if(empty($uri)){
         callBack(103,'来自未知的应用');
       }

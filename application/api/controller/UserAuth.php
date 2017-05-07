@@ -52,8 +52,7 @@ class UserAuth {
       $state = null;
     else $state = $_SERVER['HTTP_REFERER'];
     if(empty($_GET['code'])){
-      $response = $app->oauth->scopes(['snsapi_base'])
-      ->redirect($state);
+      $response = $app->oauth->scopes(['snsapi_base'])->redirect($state);
       $response->send();
     }
     $user = $app->oauth->user();
