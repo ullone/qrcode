@@ -39,6 +39,7 @@ class UserAuth {
       // 'app_id'   => 'wx860c23f43a2de53a',
       // 'secret'   => '6841c7cc7f6e83b413f0fe611ae91ff2',
       'token'    => 'mateor1newlif2cjiumeng3',
+      'state'    => 'test',
       'log'      => [
         'level'  => 'debug',
         'file'   => '/tmp/easywechat.log'
