@@ -32,21 +32,11 @@ class UserAuth {
     //
     // echo 'success';
     $app   = new Foundation\Application($options);
-    // $response = $app->server;
-    // // 将响应输出
-    // $response->send();
-    // $accessToken = $app->access_token;
-    // 从项目实例中得到服务端应用实例。
-    $oauth = $app->oauth;
-    //获取oauth 授权结果用户信息
-    $user  = $oauth->user();
-    $user  = $user->toArray();
-    echo $user;
-    // //获取openid
-    // $this->openid = $user['id'];
+    // 获取 access token 实例
+    $accessToken = $app->access_token; // EasyWeChat\Core\AccessToken 实例
+    $token = $accessToken->getToken(); // token 字符串
+    $token = $accessToken->getToken(true); // 强制重新从微信服务器获取 token.
+    echo $accessToken.'+'$token;
 
-    // $accessToken = $accessToken->toArray();
-    // $token = $accessToken->getToken();
-    // $this->openid = $token;
   }
 }
