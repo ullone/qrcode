@@ -29,7 +29,6 @@ class UserAuth {
         'file'   => '/tmp/easywechat.log'
       ],
     ];
-    //
     // echo 'success';
     $app   = new Foundation\Application($options);
     if(empty($_GET['code'])){
@@ -37,7 +36,7 @@ class UserAuth {
       $response = $app->oauth->scopes(['snsapi_base'])
       ->redirect();
     }
-    
+
     //获取openid
     $user = $app->oauth->user();
     echo $user->getId();
