@@ -32,10 +32,12 @@ class UserAuth {
     //
     // echo 'success';
     $app   = new Foundation\Application($options);
-    // 获取 access token 实例
-    $accessToken = $app->access_token; // EasyWeChat\Core\AccessToken 实例
-    $token = $accessToken->getToken(); // token 字符串
-    echo $token;
+    $response = $app->oauth->scopes(['snsapi_userinfo'])
+                          ->redirect();
+    $response->send(); 
+    // // 获取 access token 实例
+    // $accessToken = $app->access_token; // EasyWeChat\Core\AccessToken 实例
+    // // $token = $accessToken->getToken(); // token 字符串
 
   }
 }
