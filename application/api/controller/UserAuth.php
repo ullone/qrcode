@@ -34,7 +34,7 @@ class UserAuth {
   private function getOpenId(){
     $options = [
       'debug'    => true,
-      'app_id'   => 'wxfb396a8777e67439',
+      'app_id'   => 'wxfb396a8777e6743',
       'secret'   => '758831403d20fecd8b0ac6334779b3a4',
       // 'app_id'   => 'wx860c23f43a2de53a',
       // 'secret'   => '6841c7cc7f6e83b413f0fe611ae91ff2',
