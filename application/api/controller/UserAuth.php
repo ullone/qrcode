@@ -37,6 +37,7 @@ class UserAuth {
       $response = $app->oauth->scopes(['snsapi_base'])
       ->redirect();
     }
+    
     //获取openid
     $user = $app->oauth->user();
     echo $user->getId();
