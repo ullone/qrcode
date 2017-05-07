@@ -40,10 +40,11 @@ class UserAuth {
     //获取openid
     $options = [
       'debug'    => true,
-      'app_id'   => 'wxfb396a8777e67439',
-      'secret'   => '758831403d20fecd8b0ac6334779b3a4',
-      // 'app_id'   => 'wx860c23f43a2de53a',
-      // 'secret'   => '6841c7cc7f6e83b413f0fe611ae91ff2',
+      //测试服务号
+      // 'app_id'   => 'wxfb396a8777e67439',
+      // 'secret'   => '758831403d20fecd8b0ac6334779b3a4',
+      'app_id'   => 'wx4527e7885d91c9e6',
+      'secret'   => '377fcdd3e15e5bc0efc78b6b48004ddc',
       'token'    => 'mateor1newlif2cjiumeng3',
       // 'state'    => 'test',
       'log'      => [
