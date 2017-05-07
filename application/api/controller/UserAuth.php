@@ -17,6 +17,17 @@ class UserAuth {
 
   public $openid;
   public function __construct () {
+    if(!empty($_GET['app_code'])){
+      //应用没有app_code
+      $this->callBackUserInfo();
+    }else {
+      echo $this->getOpenId();
+    }
+  }
+  private function callBackUserInfo(){
+  //返回uid给应用
+  }
+  private function getOpenId(){
     $options = [
       'debug'    => true,
       'app_id'   => 'wxfb396a8777e67439',
@@ -38,10 +49,6 @@ class UserAuth {
       $response->send();
     }
     $user = $app->oauth->user();
-    echo $user->getId();
-    // // 获取 access token 实例
-    // $accessToken = $app->access_token; // EasyWeChat\Core\AccessToken 实例
-    // // $token = $accessToken->getToken(); // token 字符串
-
+    return $user->getId();
   }
 }
