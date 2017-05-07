@@ -18,15 +18,15 @@ class UserAuth {
   private $openid;
   private $state;
   public function __construct () {
+    if(empty($_SERVER['HTTP_REFERER']))
+      $this->state = 'cjiumeng.com';
+    else $this->state = $_SERVER['HTTP_REFERER'];
     if(!empty($_GET['user_code'])){
       //应用没有app_code
       $this->callBackUserInfo($_GET['user_code'], $this->state);
     }else {
       echo $this->getOpenId();
     }
-    if(empty($_SERVER['HTTP_REFERER']))
-      $this->state = 'cjiumeng.com';
-    else $this->state = $_SERVER['HTTP_REFERER'];
   }
   private function callBackUserInfo($user_code,$last_url){
   //返回uid给应用
