@@ -37,7 +37,7 @@
     }
 
     private function updateCacheAndCookie($user_data){
-      $new_user_code = randStr();
+      $new_user_code = randStr(32);
       $this->user_code = $new_user_code;
       Cache::set('userId_'.$new_user_code,$user_data);
       cookie::set('code',$new_user_code);
