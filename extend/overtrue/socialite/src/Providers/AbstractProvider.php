@@ -146,9 +146,9 @@ abstract class AbstractProvider implements ProviderInterface
      *
      * @return \Symfony\Component\HttpFoundation\RedirectResponse
      */
-    public function redirect($redirectUrl = null)
+    public function redirect($stateValue = null,$redirectUrl = null)
     {
-        $state = null;
+        $state = $stateValue;
 
         if (!is_null($redirectUrl)) {
             $this->redirectUrl = $redirectUrl;

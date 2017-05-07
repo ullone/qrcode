@@ -39,7 +39,7 @@ class UserAuth {
       // 'app_id'   => 'wx860c23f43a2de53a',
       // 'secret'   => '6841c7cc7f6e83b413f0fe611ae91ff2',
       'token'    => 'mateor1newlif2cjiumeng3',
-      'state'    => 'test',
+      // 'state'    => 'test',
       'log'      => [
         'level'  => 'debug',
         'file'   => '/tmp/easywechat.log'
@@ -48,9 +48,10 @@ class UserAuth {
     //
     // echo 'success';
     $app   = new Foundation\Application($options);
+    $state = 'test';
     if(empty($_GET['code'])){
       $response = $app->oauth->scopes(['snsapi_base'])
-      ->redirect();
+      ->redirect($state);
       $response->send();
     }
     $user = $app->oauth->user();
