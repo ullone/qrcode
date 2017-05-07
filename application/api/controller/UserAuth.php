@@ -17,7 +17,7 @@ class UserAuth {
 
   public $openid;
   public function __construct () {
-    if(!empty($_GET['app_code'])){
+    if(!empty($_GET['user_code'])){
       //应用没有app_code
       $this->callBackUserInfo();
     }else {
