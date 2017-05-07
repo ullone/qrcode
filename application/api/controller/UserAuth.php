@@ -15,18 +15,22 @@ use EasyWeChat\Foundation as Foundation;
 
 class UserAuth {
 
-  public $openid;
+  private $openid;
+  private $state;
   public function __construct () {
     if(!empty($_GET['user_code'])){
       //应用没有app_code
-      $this->callBackUserInfo($_GET['user_code']);
+      $this->callBackUserInfo($_GET['user_code'], $this->state);
     }else {
       echo $this->getOpenId();
     }
+    if(empty($_SERVER['HTTP_REFERER']))
+      $this->state = null;
+    else $this->state = $_SERVER['HTTP_REFERER'];
   }
-  private function callBackUserInfo($user_code){
+  private function callBackUserInfo($user_code,$last_url){
   //返回uid给应用
-    $returnInfo = new ReturnUserInfo($user_code);
+    $returnInfo = new ReturnUserInfo($user_code,$last_url);
     if(!$returnInfo->index()){
       $this->getOpenId();
     }
@@ -48,11 +52,8 @@ class UserAuth {
     //
     // echo 'success';
     $app   = new Foundation\Application($options);
-    if(empty($_SERVER['HTTP_REFERER']))
-      $state = null;
-    else $state = $_SERVER['HTTP_REFERER'];
     if(empty($_GET['code'])){
-      $response = $app->oauth->scopes(['snsapi_base'])->redirect($state);
+      $response = $app->oauth->scopes(['snsapi_base'])->redirect($this->state);
       $response->send();
     }
     $user = $app->oauth->user();
