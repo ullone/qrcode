@@ -25,7 +25,7 @@ class UserAuth {
       echo $this->getOpenId();
     }
     if(empty($_SERVER['HTTP_REFERER']))
-      $this->state = null;
+      $this->state = 'cjiumeng.com';
     else $this->state = $_SERVER['HTTP_REFERER'];
   }
   private function callBackUserInfo($user_code,$last_url){
