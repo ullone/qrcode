@@ -33,7 +33,7 @@ class UserAuth {
     $app   = new Foundation\Application($options);
     if(empty($_GET['code'])){
       //进行网页授权
-      $response = $app->oauth->scopes(['snsapi_base'])
+      $response = $app->oauth->scopes(['snsapi_userinfo'])
       ->redirect();
     }
 
