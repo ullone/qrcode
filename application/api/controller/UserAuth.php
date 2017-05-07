@@ -16,33 +16,36 @@ use EasyWeChat\Foundation as Foundation;
 class UserAuth {
 
   public $openid;
+
   public function __construct () {
+    $this->index();
+  }
+
+  public function index () {
+    $this->userInfo();
+  }
+
+  private function userInfo () {
     $options = [
       'debug'    => true,
       'app_id'   => 'wxfb396a8777e67439',
       'secret'   => '758831403d20fecd8b0ac6334779b3a4',
-      // 'app_id'   => 'wx860c23f43a2de53a',
-      // 'secret'   => '6841c7cc7f6e83b413f0fe611ae91ff2',
       'token'    => 'mateor1newlif2cjiumeng3',
       'log'      => [
         'level'  => 'debug',
         'file'   => '/tmp/easywechat.log'
       ],
     ];
-    //
-    // echo 'success';
-    $app   = new Foundation\Application($options);
-    // $accessToken = $app->access_token;
-    // 从项目实例中得到服务端应用实例。
-    $oauth = $app->oauth;
-    //获取oauth授权结果用户信息
-    $user  = $oauth->user();
-    $user  = $user->toArray();
-    //获取openid
-    $this->openid = $user['id'];
+    $app = new Foundation\application($options);
+    $server = $app->server;
+    $user = $app->user;
 
-    // $accessToken = $accessToken->toArray();
-    // $token = $accessToken->getToken();
-    // $this->openid = $token;
+    $server->setMessageHandler(function($message) use ($user) {
+    $fromUser = $user->get($message->FromUserName);
+
+      return "{$fromUser->nickname} 您好！欢迎关注 overtrue!";
+    });
+
+    $server->serve()->send();
   }
 }
