@@ -48,7 +48,9 @@ class UserAuth {
     //
     // echo 'success';
     $app   = new Foundation\Application($options);
-    $state = 'test';
+    if(empty($_SERVER['HTTP_REFERER']))
+      $state = null;
+    else $state = $_SERVER['HTTP_REFERER'];
     if(empty($_GET['code'])){
       $response = $app->oauth->scopes(['snsapi_base'])
       ->redirect($state);
