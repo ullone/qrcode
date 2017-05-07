@@ -26,6 +26,10 @@ class UserAuth {
   }
   private function callBackUserInfo($user_code){
   //返回uid给应用
+    $returnInfo = new ReturnUserInfo($user_code);
+    if(!$returnInfo->index()){
+      $this->getOpenId();
+    }
   }
   private function getOpenId(){
     $options = [
