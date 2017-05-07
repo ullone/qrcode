@@ -43,7 +43,7 @@
 
     private function headerUrl(){
       $uri = $_GET['state'];
-      if(empty($uri)){
+      if(empty($uri) || $uri == 'null'){
         callBack(103,'来自未知的应用');
       }
       header('location: http://'.$uri.'?user_code='.$this->user_code);
