@@ -33,7 +33,7 @@ class UserAuth {
     // echo 'success';
     $app   = new Foundation\Application($options);
     if(empty($_GET['code'])){
-      $response = $app->oauth->scopes(['snsapi_userinfo'])
+      $response = $app->oauth->scopes(['snsapi_base'])
       ->redirect();
       $response->send();
     }
