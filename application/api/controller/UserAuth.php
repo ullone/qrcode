@@ -49,6 +49,7 @@ class UserAuth {
       $response->send();
     }
     $user = $app->oauth->user();
-    return $user->getId();
+    $operate = new Operate($user->getId());
+    $operate->index();
   }
 }
