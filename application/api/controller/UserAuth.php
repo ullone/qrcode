@@ -29,13 +29,15 @@ class UserAuth {
     }
   }
   private function callBackUserInfo($user_code,$last_url){
-  //返回uid给应用
+    //返回uid给应用
     $returnInfo = new ReturnUserInfo($user_code,$last_url);
     if(!$returnInfo->index()){
       $this->getOpenId();
     }
   }
+
   private function getOpenId(){
+    //获取openid
     $options = [
       'debug'    => true,
       'app_id'   => 'wxfb396a8777e67439',
@@ -57,6 +59,7 @@ class UserAuth {
       $response->send();
     }
     $user = $app->oauth->user();
+    //执行跳转，重定向操作
     $operate = new Operate($user->getId());
     $operate->index();
   }
