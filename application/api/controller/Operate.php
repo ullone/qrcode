@@ -23,8 +23,8 @@
         $uid = Db::table('user')->where('open_id',$this->openid)->field('id')->find()['id'];
       }
       $this->updateCacheAndCookie($uid);
-      
-      $this->headerUrl($_GET['app_id']);
+
+      $this->headerUrl();
     }
 
     private function newUser($openid){
@@ -41,7 +41,7 @@
       cookie::set('code',$new_user_code);
     }
 
-    private function headerUrl($app_id){
+    private function headerUrl(){
       $uri = $_GET['state'];
       if(empty($uri)){
         callBack(103,'来自未知的应用');
