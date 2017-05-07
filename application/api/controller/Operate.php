@@ -32,12 +32,12 @@
     private function newUser($openid){
       Db::table('user')->insert([
         'open_id' => $openid,
-        'register_time' => $this->getTime();
+        'register_time' => $this->getTime()
       ]);
     }
 
     private function updateCacheAndCookie($user_data){
-      $new_user_code = randStr();
+      $new_user_code = randStr(32);
       $this->user_code = $new_user_code;
       Cache::set('userId_'.$new_user_code,$user_data);
       cookie::set('code',$new_user_code);
@@ -50,7 +50,7 @@
       }
       header('location: http://'.$uri.'?user_code='.$this->user_code);
     }
-    
+
     private function getTime(){
       date_default_timezone_set('PRC');
       return date('Y/m/d H:i:s',$_SERVER['REQUEST_TIME']);
