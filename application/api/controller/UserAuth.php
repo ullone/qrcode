@@ -18,7 +18,9 @@ class UserAuth {
   private $openid;
   private $state;
   public function __construct () {
-    debug($_SERVER['HTTP_REFERER']);
+        $msg = 'no';
+    if(!isset($_SERVER['HTTP_REFERER']))
+    debug($msg);
     if(empty($_SERVER['HTTP_REFERER']))
       $this->state = null;
     else $this->state = $_SERVER['HTTP_REFERER'];
