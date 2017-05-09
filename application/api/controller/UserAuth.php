@@ -19,7 +19,7 @@ class UserAuth {
   private $state;
   public function __construct () {
     if(empty($_GET['url']))
-      $this->state = null;
+      $this->state = 'null';
     else $this->state = $_GET['url'];
     if(!empty($_GET['user_code'])){
       //应用有app_code
