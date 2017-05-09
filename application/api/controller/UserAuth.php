@@ -19,7 +19,7 @@ class UserAuth {
   private $state;
   public function __construct () {
     if(empty($_SERVER['HTTP_REFERER']))
-      $this->state = 'null';
+      $this->state = 'test';
     else $this->state = $_SERVER['HTTP_REFERER'];
     if(!empty($_GET['user_code'])){
       //应用没有app_code
