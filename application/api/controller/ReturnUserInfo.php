@@ -20,7 +20,8 @@
         return false;
       }
       $this->writeLog($userInfo);
-      callBack(0,'成功获取用户信息',$userInfo);
+      // callBack(0,'成功获取用户信息',$userInfo);
+      echo $userInfo;
     }
 
     private function writeLog($uid){
