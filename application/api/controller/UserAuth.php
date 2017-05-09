@@ -18,12 +18,9 @@ class UserAuth {
   private $openid;
   private $state;
   public function __construct () {
-        $msg = 'no';
-    if(!isset($_SERVER['HTTP_REFERER']))
-    debug($msg);
-    if(empty($_SERVER['HTTP_REFERER']))
+    if(empty($_GET['url']))
       $this->state = null;
-    else $this->state = $_SERVER['HTTP_REFERER'];
+    else $this->state = $_GET['url'];
     if(!empty($_GET['user_code'])){
       //应用有app_code
       $this->callBackUserInfo($_GET['user_code'], $this->state);
