@@ -18,8 +18,9 @@ class UserAuth {
   private $openid;
   private $state;
   public function __construct () {
+    debug($_SERVER['HTTP_REFERER']);
     if(empty($_SERVER['HTTP_REFERER']))
-      $this->state = null;     
+      $this->state = null;
     else $this->state = $_SERVER['HTTP_REFERER'];
     if(!empty($_GET['user_code'])){
       //应用有app_code
