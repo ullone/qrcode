@@ -92,24 +92,31 @@ class UserAuth {
     $buttons = [
     [
         "type" => "view",
-        "name" => "今日歌曲",
-        "url" => "http://baidu.com"
+        "name" => "商城",
+        "url" => "http://dxzshop.cjiumeng.com/"
     ],
     [
-        "name"       => "菜单",
-        "sub_button" => [
-            [
-                "type" => "view",
-                "name" => "商城",
-                "url"  => "http://dxzshop.cjiumeng.com/"
-            ],
-            [
-                "type" => "view",
-                "name" => "社区",
-                "url"  => "http://dxzchat.cjiumeng.com/"
-            ],
-        ],
+        "type" => "view",
+        "name" => "社区",
+        "url" => "http://dxzchat.cjiumeng.com/"
     ],
+
+
+    // [
+    //     "name"       => "菜单",
+    //     "sub_button" => [
+    //         [
+    //             "type" => "view",
+    //             "name" => "商城",
+    //             "url"  => "http://dxzshop.cjiumeng.com/"
+    //         ],
+    //         [
+    //             "type" => "view",
+    //             "name" => "社区",
+    //             "url"  => "http://dxzchat.cjiumeng.com/"
+    //         ],
+    //     ],
+    // ],
   ];
   $menu->add($buttons);
 
