@@ -25,8 +25,8 @@ class UserAuth {
       //应用有app_code
       $this->callBackUserInfo($_GET['user_code'], $this->state);
     }else {
-      echo $this->getOpenId();
-      // $this->setMenu();
+      // echo $this->getOpenId();
+      $this->setMenu();
     }
   }
   private function callBackUserInfo($user_code,$last_url){
