@@ -8,9 +8,8 @@ use \think\View;
 class Index
 {
     public function index() {
+      $check = new CheckToken();
       $test = new UserAuth();
-      // echo 'success';
-      // $check = new CheckToken();
 
     }
 }
