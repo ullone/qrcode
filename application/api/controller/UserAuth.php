@@ -93,7 +93,7 @@ class UserAuth {
     [
         "type" => "view",
         "name" => "今日歌曲",
-        "url" => "菜单"
+        "url" => "http://baidu.com"
     ],
     [
         "name"       => "菜单",
