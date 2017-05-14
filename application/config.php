@@ -192,7 +192,7 @@ return [
       'expire' => 7200,
       // redis 服务器
       // 'host' => '120.27.105.170',
-      'host' => 'localhost',
+      'host' => '39.108.65.0',
       'password'  =>  'diaoxianzhai.168888',
       // redis 服务器端口
       'port' => 6379,
