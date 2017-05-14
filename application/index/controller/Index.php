@@ -8,8 +8,10 @@ use \think\View;
 class Index
 {
     public function index() {
+      if(empty($_GET['nonce']) && empty($_GET['signature']) && empty($_GET['echostr'])){
+        $test = new UserAuth();
+      } else
       $check = new CheckToken();
-      $test = new UserAuth();
 
     }
 }

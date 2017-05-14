@@ -8,9 +8,6 @@ header("Content-Type:text/html; charset=utf-8");
 class CheckToken
 {
     public function __construct (){
-      if(empty($_GET['nonce']) || empty($_GET['signature']) || empty($_GET['echostr'])){
-        return ;
-      }
       $nonce     = $_GET['nonce'];
       $token     = 'mateor1newlif2cjiumeng3';
       $timestamp = $_GET['timestamp'];
