@@ -193,7 +193,7 @@ return [
       // redis 服务器
       // 'host' => '120.27.105.170',
       'host' => 'localhost',
-      'password'  =>  'cjiumeng',
+      'password'  =>  'diaoxianzhai.168888',
       // redis 服务器端口
       'port' => 6379,
     ],
