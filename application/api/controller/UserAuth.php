@@ -25,8 +25,8 @@ class UserAuth {
       //应用有app_code
       $this->callBackUserInfo($_GET['user_code'], $this->state);
     }else {
-      // echo $this->getOpenId();
-      $this->setMenu();
+      echo $this->getOpenId();
+      // $this->setMenu();
     }
   }
   private function callBackUserInfo($user_code,$last_url){
@@ -42,10 +42,10 @@ class UserAuth {
     $options = [
       'debug'    => true,
       //测试服务号
-      'app_id'   => 'wxfb396a8777e67439',
-      'secret'   => '758831403d20fecd8b0ac6334779b3a4',
-      // 'app_id'   => 'wx4527e7885d91c9e6',
-      // 'secret'   => '377fcdd3e15e5bc0efc78b6b48004ddc',
+      // 'app_id'   => 'wxfb396a8777e67439',
+      // 'secret'   => '758831403d20fecd8b0ac6334779b3a4',
+      'app_id'   => 'wx4527e7885d91c9e6',
+      'secret'   => '377fcdd3e15e5bc0efc78b6b48004ddc',
       'token'    => 'mateor1newlif2cjiumeng3',
       // 'state'    => 'test',
       'log'      => [
@@ -70,10 +70,10 @@ class UserAuth {
     $options = [
       'debug'    => true,
       //测试服务号
-      'app_id'   => 'wxfb396a8777e67439',
-      'secret'   => '758831403d20fecd8b0ac6334779b3a4',
-      // 'app_id'   => 'wx4527e7885d91c9e6',
-      // 'secret'   => '377fcdd3e15e5bc0efc78b6b48004ddc',
+      // 'app_id'   => 'wxfb396a8777e67439',
+      // 'secret'   => '758831403d20fecd8b0ac6334779b3a4',
+      'app_id'   => 'wx4527e7885d91c9e6',
+      'secret'   => '377fcdd3e15e5bc0efc78b6b48004ddc',
       'token'    => 'mateor1newlif2cjiumeng3',
       // 'state'    => 'test',
       'log'      => [
@@ -90,16 +90,16 @@ class UserAuth {
     }
     $menu = $app->menu;
     $buttons = [
-    [
-        "type" => "view",
-        "name" => "商城",
-        "url" => "http://dxzshop.cjiumeng.com/"
-    ],
-    [
-        "type" => "view",
-        "name" => "社区",
-        "url" => "http://dxzchat.cjiumeng.com/"
-    ],
+      [
+          "type" => "view",
+          "name" => "商城",
+          "url" => "http://dxzshop.cjiumeng.com/"
+      ],
+      [
+          "type" => "view",
+          "name" => "社区",
+          "url" => "http://dxzchat.cjiumeng.com/"
+      ],
 
 
     // [
@@ -117,8 +117,8 @@ class UserAuth {
     //         ],
     //     ],
     // ],
-  ];
-  $menu->add($buttons);
+    ];
+    $menu->add($buttons);
 
   }
 }
