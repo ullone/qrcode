@@ -26,7 +26,7 @@ class UserAuth {
       $this->callBackUserInfo($_GET['user_code'], $this->state);
     } else if(!(empty($_GET['menu_set']))){
       if($_GET['menu_set'] == 1){
-        this->setMenu();
+        $this->setMenu();
       }
     }else {
       echo $this->getOpenId();
