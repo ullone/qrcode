@@ -29,7 +29,8 @@ class UserAuth {
     //   if($_GET['menu_set'] == 1){
     //     $this->setMenu();
     //   }
-    }else {
+    // }
+    else {
       echo $this->getOpenId();
       // $this->setMenu();
     }
