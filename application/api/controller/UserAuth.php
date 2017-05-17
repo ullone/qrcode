@@ -24,10 +24,11 @@ class UserAuth {
     if(!empty($_GET['user_code'])){
       //应用有app_code
       $this->callBackUserInfo($_GET['user_code'], $this->state);
-    } else if(!(empty($_GET['menu_set']))){
-      if($_GET['menu_set'] == 1){
-        $this->setMenu();
-      }
+    }
+    // else if(!(empty($_GET['menu_set']))){
+    //   if($_GET['menu_set'] == 1){
+    //     $this->setMenu();
+    //   }
     }else {
       echo $this->getOpenId();
       // $this->setMenu();
