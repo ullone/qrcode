@@ -9,7 +9,7 @@ class CheckToken
 {
     public function __construct (){
       $nonce     = $_GET['nonce'];
-      $token     = 'mateor1newlif2cjiumeng3';
+      $token     = 'qrcodetest';
       $timestamp = $_GET['timestamp'];
       $echostr   = $_GET['echostr'];
       $signature = $_GET['signature'];
