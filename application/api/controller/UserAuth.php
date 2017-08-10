@@ -104,8 +104,8 @@ class UserAuth {
     $ticket = $result->ticket;// 或者 $result['ticket']
     $expireSeconds = $result->expire_seconds; // 有效秒数
     $url = $result->url; // 二维码图片解析后的地址，开发者可根据该地址自行生成需要的二维码图片
-    var_dump($url);die ;
-    echo '<img src="'.$url.'">';
+    // var_dump($url);die ;
+    echo '<img src="'.$qrcode->url($ticket).'">';
   }
 
   public function setMenu(){
