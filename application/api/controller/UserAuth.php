@@ -50,9 +50,9 @@ class UserAuth {
       //测试服务号
       // 'app_id'   => 'wxfb396a8777e67439',
       // 'secret'   => '758831403d20fecd8b0ac6334779b3a4',
-      'app_id'   => 'wx4527e7885d91c9e6',
-      'secret'   => '377fcdd3e15e5bc0efc78b6b48004ddc',
-      'token'    => 'mateor1newlif2cjiumeng3',
+      'app_id'   => 'wx1088ddeead7c4aa7',
+      'secret'   => 'f8779402d2d919717ae7fe8a4fc26230',
+      'token'    => 'qrcodetest',
       // 'state'    => 'test',
       'log'      => [
         'level'  => 'debug',
@@ -78,9 +78,9 @@ class UserAuth {
       //测试服务号
       // 'app_id'   => 'wxfb396a8777e67439',
       // 'secret'   => '758831403d20fecd8b0ac6334779b3a4',
-      'app_id'   => 'wx4527e7885d91c9e6',
-      'secret'   => '377fcdd3e15e5bc0efc78b6b48004ddc',
-      'token'    => 'mateor1newlif2cjiumeng3',
+      'app_id'   => 'wx1088ddeead7c4aa7',
+      'secret'   => 'f8779402d2d919717ae7fe8a4fc26230',
+      'token'    => 'qrcodetest',
       // 'state'    => 'test',
       'log'      => [
         'level'  => 'debug',
