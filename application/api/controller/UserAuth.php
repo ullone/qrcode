@@ -21,8 +21,8 @@ class UserAuth {
   public function __construct () {
     // $this->authCheck();
     $this->set();
-    $this->getQrcode();
-
+    // $this->getQrcode();
+    $this->setMenu();
   }
 
   private function set () {
@@ -70,23 +70,7 @@ class UserAuth {
 
   private function getOpenId(){
     //获取openid
-    $options = [
-      'debug'    => true,
-      //测试服务号
-      // 'app_id'   => 'wxfb396a8777e67439',
-      // 'secret'   => '758831403d20fecd8b0ac6334779b3a4',
-      'app_id'   => 'wx1088ddeead7c4aa7',
-      'secret'   => 'f8779402d2d919717ae7fe8a4fc26230',
-      'token'    => 'qrcodetest',
-      // 'state'    => 'test',
-      'log'      => [
-        'level'  => 'debug',
-        'file'   => '/tmp/easywechat.log'
-      ],
-    ];
-    //
-    // echo 'success';
-    $app   = new Foundation\Application($options);
+    $app   = new Foundation\Application($this->options);
     if(empty($_GET['code'])){
       $response = $app->oauth->scopes(['snsapi_base'])->redirect($this->state);
       $response->send();
@@ -109,23 +93,7 @@ class UserAuth {
   }
 
   public function setMenu(){
-    $options = [
-      'debug'    => true,
-      //测试服务号
-      // 'app_id'   => 'wxfb396a8777e67439',
-      // 'secret'   => '758831403d20fecd8b0ac6334779b3a4',
-      'app_id'   => 'wx1088ddeead7c4aa7',
-      'secret'   => 'f8779402d2d919717ae7fe8a4fc26230',
-      'token'    => 'qrcodetest',
-      // 'state'    => 'test',
-      'log'      => [
-        'level'  => 'debug',
-        'file'   => '/tmp/easywechat.log'
-      ],
-    ];
-    //
-    // echo 'success';
-    $app   = new Foundation\Application($options);
+    $app   = new Foundation\Application($this->options);
     if(empty($_GET['code'])){
       $response = $app->oauth->scopes(['snsapi_base'])->redirect($this->state);
       $response->send();
@@ -147,23 +115,6 @@ class UserAuth {
           "name" => "关于我们",
           "url" => "http://dxzshop.cjiumeng.com/?feat=default"
       ],
-
-
-    // [
-    //     "name"       => "菜单",
-    //     "sub_button" => [
-    //         [
-    //             "type" => "view",
-    //             "name" => "商城",
-    //             "url"  => "http://dxzshop.cjiumeng.com/"
-    //         ],
-    //         [
-    //             "type" => "view",
-    //             "name" => "社区",
-    //             "url"  => "http://dxzchat.cjiumeng.com/"
-    //         ],
-    //     ],
-    // ],
     ];
     $menu->add($buttons);
 
