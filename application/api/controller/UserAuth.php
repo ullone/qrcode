@@ -89,8 +89,8 @@ class UserAuth {
     $expireSeconds = $result->expire_seconds; // 有效秒数
     $url = $result->url; // 二维码图片解析后的地址，开发者可根据该地址自行生成需要的二维码图片
     // var_dump($url);die ;
-    echo 'url:'.$url;
-    echo 'ticket:'.$ticket;
+    // echo 'url:'.$url;
+    // echo 'ticket:'.$ticket;
     echo '<img src="'.$qrcode->url($ticket).'">';
   }
 
