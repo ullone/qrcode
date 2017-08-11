@@ -2,6 +2,7 @@
 namespace app\index\controller;
 
 use app\api\controller\UserAuth;
+use app\api\controller\UserAuth;
 use app\api\controller\CheckToken;
 use \think\View;
 
@@ -12,6 +13,9 @@ class Index
       //   $test = new UserAuth();
       // } else
       // $check = new CheckToken();
-      $test = new UserAuth();
+      if(empty($_GET))
+        $test = new Test();
+      else
+        $test = new UserAuth();
     }
 }
