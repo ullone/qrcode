@@ -28,7 +28,7 @@ class UserAuth {
 
   private function reply () {
     // ... 前面部分省略
-    $app = new Foundation\Application($options);
+    $app = new Foundation\Application($this->options);
     // 从项目实例中得到服务端应用实例。
     $server = $app->server;
     $server->setMessageHandler(function ($message) {
