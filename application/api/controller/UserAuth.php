@@ -28,7 +28,7 @@ class UserAuth {
 
   private function reply () {
     // ... 前面部分省略
-    $app = new Application($this->options);
+    $app = new Foundation\Application($this->options);
     $server = $app->server;
     $server->setMessageHandler(function ($message) {
         return "您好！欢迎关注我!";
