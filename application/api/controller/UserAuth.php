@@ -21,8 +21,19 @@ class UserAuth {
   public function __construct () {
     // $this->authCheck();
     $this->set();
-    $this->getQrcode();
+    $this->reply();
+    // $this->getQrcode();
     // $this->setMenu();
+  }
+
+  private function reply () {
+    // ... 前面部分省略
+    $app = new Application($this->options);
+    $server = $app->server;
+    $server->setMessageHandler(function ($message) {
+        return "您好！欢迎关注我!";
+    });
+    $server->serve()->send();
   }
 
   private function set () {
