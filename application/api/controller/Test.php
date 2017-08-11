@@ -1,6 +1,8 @@
 <?php
   namespace app\api\controller;
 
+  require_once __DIR__ . '/../../../extend/autoload.php';
+
   use think\Db;
   use think\Cookie;
   use think\Cache;
