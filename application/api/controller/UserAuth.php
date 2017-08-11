@@ -33,7 +33,7 @@ class UserAuth {
     $server->setMessageHandler(function ($message) {
         return "您好！欢迎关注我!";
     });
-    $server->serve()->send();
+    // $server->serve()->send();
   }
 
   private function set () {
