@@ -3,7 +3,6 @@ namespace app\index\controller;
 
 use app\api\controller\UserAuth;
 use app\api\controller\CheckToken;
-use EasyWeChat\Foundation as Foundation;
 use \think\View;
 
 class Index
@@ -13,11 +12,6 @@ class Index
       //   $test = new UserAuth();
       // } else
       // $check = new CheckToken();
-      $app = new Foundation\Application($this->options);
-      $server = $app->server;
-      $server->setMessageHandler(function ($message) {
-          return "您好！欢迎关注我!";
-      });
-      $server->serve()->send();
+      $test = new UserAuth();
     }
 }
