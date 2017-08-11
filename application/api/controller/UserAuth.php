@@ -28,12 +28,17 @@ class UserAuth {
 
   private function reply () {
     // ... 前面部分省略
-    $app = new Foundation\Application($this->options);
+    $app = new Foundation\Application($options);
+    // 从项目实例中得到服务端应用实例。
     $server = $app->server;
     $server->setMessageHandler(function ($message) {
+        // $message->FromUserName // 用户的 openid
+        // $message->MsgType // 消息类型：event, text....
         return "您好！欢迎关注我!";
     });
-    // $server->serve()->send();
+    $response = $server->serve();
+    $response->send(); // Laravel 里请使用：return $response;
+
   }
 
   private function set () {
