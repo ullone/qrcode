@@ -84,13 +84,13 @@ class UserAuth {
   private function getQrcode () {
     $app = new Foundation\Application($this->options);
     $qrcode = $app->qrcode;
-    $result = $qrcode->temporary(56, 6 * 24 * 3600,'http://dxzchat.cjiumeng.com');
+    $result = $qrcode->temporary(56, 6 * 24 * 3600);
     $ticket = $result->ticket;// 或者 $result['ticket']
     $expireSeconds = $result->expire_seconds; // 有效秒数
     $url = $result->url; // 二维码图片解析后的地址，开发者可根据该地址自行生成需要的二维码图片
     // var_dump($url);die ;
-    echo 'url:'.$url;
-    echo 'ticket:'.$ticket;
+    // echo 'url:'.$url;
+    // echo 'ticket:'.$ticket;
     echo '<img src="'.$qrcode->url($ticket).'">';
   }
 
